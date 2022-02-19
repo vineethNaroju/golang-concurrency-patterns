@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func fib(N int) <-chan int {
+func Fib(N int) <-chan int {
 	c := make(chan int)
 
 	go func() {
@@ -19,7 +19,7 @@ func fib(N int) <-chan int {
 
 func main() {
 
-	for x := range fib(20) {
+	for x := range Fib(20) {
 		fmt.Println(x)
 	}
 
